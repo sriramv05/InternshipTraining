@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Steps</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Steps Involved</h1>
+    <div class="content">
+        <h3>1. User App Development</h3>
+        <p><b>Develop a mobile app using a cross-platform framework like Flutter or React Native so it works on both Android and iOS.
+        Two main users:</b><br>
+        General users (public) - They can send out an SOS alert if they witness an accident.
+        Responders (ambulance drivers, police) - They receive the alert and respond to the emergency.</p>
+        <h3>2. SOS Alert System</h3>
+        <p><b>When an accident happens:</b><br>
+        A nearby user clicks the SOS button in the app.
+        The app captures the user's location and sends a signal to nearby police, ambulance drivers, and other users within a specified range (like 5 km).
+        Push notifications are sent to responders and people around the area using a service like Firebase Cloud Messaging.</p>
+        <h3>3. Ambulance Dispatch & Routing</h3>
+        <p><b>Ambulance drivers receive alerts:</b><br>
+        When a driver accepts the alert by clicking the Pick-up button, the app will provide them with directions to the accident site using Google Maps API.
+        After picking up the patient, the driver can select a nearby hospital (listed by the app) and the app will then reroute them to the hospital.</p>
+        <h3>4. Traffic Signal Integration</h3>
+        <p><b>Traffic signal control:</b><br>
+        The app communicates with IoT-controlled traffic lights in the city.
+        As the ambulance moves toward the hospital, traffic signals on its route will automatically turn green to clear the way.
+        This requires coordination with local government authorities to integrate with their traffic systems.</p>
+        <h3>5. Real-Time Communication</h3>
+        <p><b>Keep everyone updated:</b><br>
+        Use real-time communication (via WebSockets or Firebase) so police, hospitals, and other users can track the status of the SOS alert and ambulance (e.g., "En Route," "Picked Up," "At Hospital").</p>
+        <h3>6. Push Notifications</h3>
+        <p><b>When an SOS is raised:</b><br>
+        Nearby users and responders are notified through push notifications (using Firebase Cloud Messaging).
+        Notifications will be customized to show different messages to different types of users (e.g., public users get a general alert, while ambulance drivers get the location details).</p>
+        <h3>7. Database Setup</h3>
+        <p><b>Save and manage data:</b><br>
+        User data (profiles for police, drivers, general users).
+        SOS alerts (location, time, status).
+        Routing data (to track routes taken by ambulances).
+        Use databases like Firebase (for real-time data) or PostgreSQL for more structured data.</p>
+        <h3>8. Security & Authentication</h3>
+        <p><b>User Authentication:</b><br>
+        Users log in using Firebase Authentication to ensure only authorized personnel can take certain actions (like police or ambulance drivers).
+        Protect sensitive data (like locations) by encrypting data both at rest and during transmission.</p>
+        <h3>9. Monitoring & Analytics</h3>
+        <p><b>Track performance:</b><br>
+        Use Google Analytics to monitor app usage, SOS alerts, and how often the system is used.
+        Create a real-time dashboard to track ongoing SOS alerts, ambulance status, and traffic signal controls.</p>
+        <h3>10. Testing & Deployment</h3>
+        <p>Test the app across different devices using tools like Firebase Test Lab.
+        Deploy the app on the Google Play Store and Apple App Store for users to download and start using it.</p>
+        <h4 style="color: rgb(33, 153, 174); padding-top: 10px;">Steps for MVP (Minimum Viable Product)</h4>
+        <p>Build basic SOS alert functionality where users can send an alert, and responders (police and ambulances) get notified.
+        Add ambulance routing with navigation to the accident and hospital.
+        Later, integrate traffic signals for green-light routes and add advanced features (like public alerts).</p>
+    </div>
+</body>
+</html>

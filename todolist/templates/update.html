@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block head %}  
+<title>Update</title>
+{% endblock %}
+
+{% block body %}  
+<center>
+    <div class="container" style="width:50%">
+    <h1>UPDATE TASK</h1>
+
+<form action="/update/{{task.id}}" method="POST">
+    <input type="text" name="content" id="content" value="{{task.content}}">
+    <input type="submit" value="Update Task">
+</form>
+</div>
+<img src="{{ url_for('static', filename='image/wait.gif') }}" style="width: 200px;height: 200px;padding-top: 100px;">
+</center>
+{% endblock %}
